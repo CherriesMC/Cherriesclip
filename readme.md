@@ -1,10 +1,10 @@
-Leavesclip
-=========
-A binary patch distribution system for Leaves.
+Cherriesclip
+============
+A binary patch distribution system for Cherries.
 
-Leavesclip is the launcher for the Leaves Minecraft server. It uses a [bsdiff](http://www.daemonology.net/bsdiff/) patch
-between the vanilla Minecraft server and the modified Leaves server to generate the Leaves Minecraft server immediately
-upon first run. Once the Leaves server is generated it loads the patched jar into Leavesclip's own class loader, and
+Cherriesclip is the launcher for the Cherries Minecraft server. It uses a [bsdiff](http://www.daemonology.net/bsdiff/) patch
+between the vanilla Minecraft server and the modified Cherries server to generate the Cherries Minecraft server immediately
+upon first run. Once the Cherries server is generated it loads the patched jar into Cherriesclip's own class loader, and
 runs
 the main class.
 

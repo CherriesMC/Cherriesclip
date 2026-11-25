@@ -84,10 +84,10 @@ publishing {
             withoutBuildIdentifier()
 
             pom {
-                val repoPath = "LeavesMC/Leavesclip"
+                val repoPath = "CherriesMC/Cherriesclip"
                 val repoUrl = "https://github.com/$repoPath"
 
-                name.set("Leavesclip")
+                name.set("Cherriesclip")
                 description.set(project.description)
                 url.set(repoUrl)
                 packaging = "jar"
