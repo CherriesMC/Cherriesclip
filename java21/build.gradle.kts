@@ -17,6 +17,7 @@ tasks.withType<JavaCompile>().configureEach {
 
 repositories {
     mavenCentral()
+    mavenLocal() // TODO: remove once our Maven repository is available
     maven("https://repo.spongepowered.org/maven/")
     maven("https://repo.leavesmc.org/releases/")
     maven("https://repo.leavesmc.org/snapshots/")
@@ -25,7 +26,7 @@ repositories {
 dependencies {
     @Suppress("VulnerableLibrariesLocal", "RedundantSuppression")
     implementation("io.sigpipe:jbsdiff:1.0")
-    implementation("org.leavesmc:leaves-plugin-mixin-condition:1.0.0")
+    implementation("org.endlessmc.cherries:cherries-plugin-mixin-condition:1.0.0")
     implementation("io.github.llamalad7:mixinextras-common:0.5.0")
     implementation("net.fabricmc:access-widener:2.1.0")
     implementation("net.fabricmc:sponge-mixin:0.16.5+mixin.0.8.7") {
