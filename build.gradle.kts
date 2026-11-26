@@ -75,7 +75,6 @@ val sourcesJar by tasks.registering(Jar::class) {
     archiveClassifier.set("sources")
 }
 
-val isSnapshot = project.version.toString().endsWith("-SNAPSHOT")
 
 publishing {
     publications {
@@ -134,17 +133,13 @@ publishing {
         }
 
         repositories {
-            val url = if (isSnapshot) {
-                "https://repo.leavesmc.org/snapshots"
-            } else {
-                "https://repo.leavesmc.org/releases"
-            }
-
-            maven(url) {
-                name = "leaves"
-                credentials(PasswordCredentials::class) {
-                    username = System.getenv("LEAVES_USERNAME")
-                    password = System.getenv("LEAVES_PASSWORD")
+            maven(System.getenv("CHERRIES_MAVEN_URL") ?: "https://cherriesmc.github.io/Cherries/") {
+                name = "cherries"
+                if (System.getenv("CHERRIES_MAVEN_USERNAME") != null) {
+                    credentials(PasswordCredentials::class) {
+                        username = System.getenv("CHERRIES_MAVEN_USERNAME")
+                        password = System.getenv("CHERRIES_MAVEN_PASSWORD")
+                    }
                 }
             }
         }
