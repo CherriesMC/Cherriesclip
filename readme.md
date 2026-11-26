@@ -14,11 +14,11 @@ Please note that these features may bring some safety hazards.
 
 You can completely disable some of our features by adding the jvm parameter:
 
-* `-Dleavesclip.disable.auto-update=true`
+* `-Dcherriesclip.disable.auto-update=true` (legacy alias: `-Dleavesclip.disable.auto-update=true`)
 
 If you want to use mixin, you need to add the following jvm parameters:
 
-* `-Dleavesclip.enable.mixin=true`
+* `-Dcherriesclip.enable.mixin=true` (legacy alias: `-Dleavesclip.enable.mixin=true`)
 
 This avoids the legal problems of the GPL's linking clause.
 
@@ -28,7 +28,7 @@ It checks via sha256 so any modification to those jars (or updated launcher) wil
 Building
 --------
 
-Building Leavesclip creates a runnable jar, but the jar will not contain the Leavesclip config file or patch data. This
+Building Cherriesclip creates a runnable jar, but the jar will not contain the Cherriesclip config file or patch data. This
 project consists simply of the launcher itself, the [paperweight Gradle plugin](https://github.com/PaperMC/paperweight)
 (we use our fork [Cherriesweight](https://github.com/CherriesMC/Cherriesweight)) generates the patch and config file and inserts
 it into the jar provided by this project, creating a working runnable jar.

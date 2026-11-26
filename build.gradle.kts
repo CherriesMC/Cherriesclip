@@ -14,7 +14,7 @@ subprojects {
     }
 }
 
-val mainClass = "org.leavesmc.leavesclip.Main"
+val mainClass = "org.endlessmc.cherries.clip.Main"
 
 tasks.jar {
     val java6Jar = project(":java6").tasks.named("jar")
@@ -31,18 +31,23 @@ tasks.jar {
     }
 
     doFirst {
-        val clipVerFile = File("leavesclip-version")
+        val clipVerFile = File("cherriesclip-version")
         if (!clipVerFile.exists()) {
             if(!clipVerFile.createNewFile()){
-                println("failed to create file: leavesclip-version")
+                println("failed to create file: cherriesclip-version")
                 exitProcess(1)
             }
         }
         clipVerFile.writeText(project.version.toString())
     }
 
-    from(file("leavesclip-version")) {
+    from(file("cherriesclip-version")) {
         into("META-INF")
+    }
+
+    from(file("cherriesclip-version")) {
+        into("META-INF")
+        rename { "leavesclip-version" }
     }
 
     from(file("licenses/license.txt")) {
