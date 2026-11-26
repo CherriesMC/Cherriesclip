@@ -16,6 +16,7 @@ tasks.withType<JavaCompile>().configureEach {
 }
 
 repositories {
+    maven(System.getenv("CHERRIES_MAVEN_URL") ?: "https://cherriesmc.github.io/Cherries/")
     mavenCentral()
     mavenLocal() // TODO: remove once our Maven repository is available
     maven("https://repo.spongepowered.org/maven/")
